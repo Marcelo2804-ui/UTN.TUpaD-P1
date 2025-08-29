@@ -1,0 +1,45 @@
+fecha_input = input("Ingrese la fecha actual en formato 'día, DD/MM': ")
+
+partes = fecha_input.split(', ')
+dia_semana_str = partes[0].lower()
+fecha_numerica_str = partes[1]
+
+dia_str, mes_str = fecha_numerica_str.split('/')
+dia_num = int(dia_str)
+mes_num = int(mes_str)
+
+if dia_num > 31 or mes_num > 12:
+    print("Error: El día o el mes son inválidos.")
+elif dia_semana_str not in ['lunes', 'martes', 'miercoles', 'jueves', 'viernes']:
+    print("Error: El día de la semana no existe.")
+else:
+    print(f"Día ingresado: {dia_semana_str.capitalize()}")
+    
+    if dia_semana_str in ['lunes', 'martes', 'miercoles']:
+        hubo_examenes = input("¿Se tomaron exámenes? (sí/no): ").lower()
+        if hubo_examenes == 'si':
+            alumnos_aprobados = int(input("Ingrese la cantidad de alumnos que aprobaron: "))
+            alumnos_desaprobados = int(input("Ingrese la cantidad de alumnos que no aprobaron: "))
+            total_alumnos = alumnos_aprobados + alumnos_desaprobados
+            if total_alumnos > 0:
+                porcentaje_aprobados = (alumnos_aprobados / total_alumnos) * 100
+                print(f"El porcentaje de aprobados es del {porcentaje_aprobados:.2f}%.")
+            else:
+                print("No hay alumnos para calcular el porcentaje.")
+        else:
+            print("Fue un dia light.")
+    elif dia_semana_str == 'jueves':
+        porcentaje_asistencia = float(input("Ingrese el porcentaje de asistencia a clase: "))
+        if porcentaje_asistencia > 50:
+            print("Asistió la mayoría.")
+        else:
+            print("No asistió la mayoría.")
+    elif dia_semana_str == 'viernes':
+        if (dia_num == 1 and mes_num == 1) or (dia_num == 1 and mes_num == 7):
+            print("Comienzo de nuevo ciclo.")
+            cantidad_alumnos = int(input("Ingrese la cantidad de alumnos del nuevo ciclo: "))
+            arancel_alumno = float(input("Ingrese el arancel en $ por cada alumno: "))
+            ingreso_total = cantidad_alumnos * arancel_alumno
+            print(f"El ingreso total es de ${ingreso_total:.2f}.")
+        else:
+            print("Hoy comienza un nuevo ciclo.")
