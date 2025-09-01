@@ -84,5 +84,5 @@ num3 = float(num3_str)
 promedio = (num1 + num2 + num3) / 3
 print(f"El promedio de los tres números es: {promedio:.2f}")
 
-print(f"{name_completo_input}, Gracias por participar en mi aprendizaje")
+print(f"{name_completo_input}, Gracias por participar en mi aprendizaje") 
 
