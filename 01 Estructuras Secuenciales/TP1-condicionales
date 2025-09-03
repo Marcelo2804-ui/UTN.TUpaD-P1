@@ -1,14 +1,14 @@
-# primer ejercicio
+# ejercicio 1
 print("Hola Mundo!") 
 name_completo_input = input("Ingrese su nombre completo: ")
 
-# segundo ejercicio
+#ejercicio 2
 print(f"Mucho gusto, {name_completo_input}") 
 print(f"Me presento soy un programa en desarrollo")
 nacionalidad = input(f"{name_completo_input}, de que pais eres? ")
 edad = input("cual es tu edad? ")
 
-# tercer ejercicio
+# ejercicio 3
 print(f"{nacionalidad}, que bello pais, ademas tienes {edad} años. ") 
 
 #ejercicio 4 
