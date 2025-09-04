@@ -1,0 +1,25 @@
+# Ejercicio 1: Solicitar al usuario su edad y determinar si es mayor de edad (18 años o más).
+# Si es mayor de edad, imprimir un mensaje indicando que es mayor de edad.
+edad = int(input("Por favor, ingrese su edad: "))
+if edad > 18:
+    print("Es mayor de edad")
+# agregado para hacerlo mas divertido
+    print("Recuerdas esa primer nota  que tuviste en primaria? Seguro estabas re nervioso/a")
+# Ejercicio 2: Solicitar al usuario una nota (0-10) y determinar si está aprobado (nota >= 6) o reprobado (nota < 6).
+# Imprimir un mensaje indicando si está aprobado o reprobado.
+nota = int(input("Decime la nota y te dire la mia :D : "))
+# Evaluamos la nota
+if nota >= 6:
+    print("Desde siempre esforndote! Aprobado, Muy bien!")
+else:
+    print("Tranquilo que la proxima se puede! Reprobado, la mayoria pensamos en hacer amigos jejee xD")
+# Ejercicio 3: Solicitar al usuario la temperatura actual en grados Celsius y determinar si hace frío (temperatura < 15),
+# clima templado (15 <= temperatura <= 25) o calor (temperatura > 25). Imprimir un mensaje indicando el clima.
+    print("a otra cosa mariposa!, no se vos pero me estoy congelando aca, calentemos las cosas? Decime la temperatura ideal para vos en °C  a ver si coincidimos")
+temperatura = int(input("Ingrese la temperatura actual en °C: "))
+if temperatura > 25:
+    print("Caliente, pero no es lo que mas me agrada xD!")
+elif temperatura >= 15 and temperatura <= 25:
+    print("Lindo para un paseo, pero aun no es lo mas agradable para mi.")
+else:
+    print("Sos de los mios, frio y a la vez calido, me encanta!")
