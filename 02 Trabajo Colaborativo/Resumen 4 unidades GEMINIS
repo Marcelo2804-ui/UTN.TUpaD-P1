@@ -1,0 +1,32 @@
+# UNIDAD 1: ESTRUCTURAS SECUENCIALES - Entrada y Salida de datos
+
+# Pedimos el nombre del cliente y su pedido usando la función input()
+nombre = input("Hola, bienvenido al café. ¿Cuál es tu nombre? ")
+pedido = input(f"Hola {nombre}. ¿Qué te gustaría ordenar hoy? ")
+
+# UNIDAD 3: ESTRUCTURAS CONDICIONALES - Tomamos una decisión
+
+# Revisamos si el cliente pidió algo en el menú
+if pedido.lower() in ["café", "te", "medialunas"]:
+    # Si es algo que vendemos, confirmamos el pedido
+    print(f"¡Excelente elección, {nombre}! En un momento sale tu {pedido}.")
+elif "nada" in pedido.lower():
+    # Si no pidió nada, nos despedimos
+    print(f"Está bien, {nombre}. Si necesitas algo más, avísame. ¡Que tengas un buen día!")
+else:
+    # Si pidió algo que no está en el menú, lo informamos
+    print(f"Disculpa, {nombre}, por ahora no tenemos {pedido}. ¿Te gustaría elegir otra cosa?")
+
+# UNIDAD 4: ESTRUCTURAS REPETITIVAS - Repetimos un proceso
+
+# Le preguntamos al cliente si quiere algo más con un bucle while
+respuesta = ""
+while respuesta.lower() != "no":
+    respuesta = input("¿Te gustaría ordenar algo más? (si/no) ")
+    if respuesta.lower() == "si":
+        otro_pedido = input("¿Qué más te gustaría? ")
+        print(f"Agregado un {otro_pedido} a tu pedido, {nombre}.")
+    elif respuesta.lower() == "no":
+        print("¡Perfecto! El total es $500. Gracias por tu compra.")
+    else:
+        print("Por favor, responde 'si' o 'no'.")
